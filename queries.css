@@ -1,0 +1,129 @@
+@media only screen and (max-width: 1280px) {
+    .nav__link__a { font-size: 80%; }
+    .about__title{
+        font-size: 300%;
+        width: 225px;
+    }
+    .about__info { 
+        font-size: 135%; 
+        width: 450px;
+    }
+    .nav__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    } 
+    .nav__links {
+        min-width: 680px;
+    }
+    .nav__logo { width:50px; height: auto; } 
+    .header__title{
+        font-size: 2.5rem;
+        width: 600px;
+    }
+    .header__subtitle{ font-size: 1.5rem; }
+    
+    .row .image__container {
+        width: 25vw;
+        height: 25vh;
+    }
+    
+    .row img {
+        width: 25vw;
+        height: auto;
+    }
+    
+    .item {
+        flex: 0 0 25%;
+    }
+
+    
+    .item h2 {
+        font-size: 1.25rem;
+    }
+    
+    .item p {
+        width: 20vw;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .about {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .about {
+        padding: 50px 0 125px 0;
+    }
+    .about__title {
+        width: 450px;
+        margin: 0 0 15px 0;
+        padding-top: 20px;
+    }
+    .nav { display: none;}
+    .header { width: 700px; }
+    .header__title {
+        font-size: 2rem;
+        width: 700px;
+        margin-bottom: 5px;
+    }
+    .header__subtitle{ font-size: 1.25rem; }
+    .row {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .item {
+        width: 50vw;
+    }
+
+    .row .image__container {
+        width: 50vw;
+        height: 25vh;
+    }
+    
+    .row img {
+        width: 50vw;
+        height: auto;
+    }
+
+    .item p {
+        width: 45vw;
+    }
+}
+
+@media only screen and (max-width: 780px) {
+    .header { width: 500px; }
+    .header__title{
+        font-size: 1.5rem;
+        width: 500px;
+        margin-bottom: 5px;
+    }
+    .header__subtitle{ font-size: 1.25rem; }
+}
+
+@media only screen and (max-width: 580px) {
+    .about__title{
+        font-size: 200%;
+        width: 85vw;
+    }
+    .about_content h2 {
+        font-size: 200% !important;
+        width: 85vw !important;
+    }
+    .about_content p {
+        font-size: 120% !important;
+        width: 85vw !important;
+    }
+    .about__info { font-size: 120%; }
+    .about__content .about__info { width: 85vw; }
+    .header__subtitle{ font-size: 1rem; }
+    .header { width: 85vw; }
+    .header__title {
+        font-size: 1.5rem;
+        width: 85vw;
+        margin-bottom: 5px;
+    }
+}
