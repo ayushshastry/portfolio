@@ -14,21 +14,21 @@ let websiteLoop = setInterval(() => {
 
 const projects = [
     {
-        link: "https://www.youtube.com/watch?v=Y7WrLGbOVqw",
+        link: "https://public.tableau.com/app/profile/ayush.shastry/viz/dashboardSubmit/AyushShastrysDashboard?publish=yes",
         image: "hero.jpg",
         openInNewTab: true,
-        title: "ShotChain - Video Demo",
-        description: "ShotChain is an original Web3 project created in 4 days during the Starknet Hacker House in Denver. It was the number 1 ranked finalist and had the opportunity to present infront of Starkware executives. Developed with React, Tailwind, MongoDB, and Cairo"
+        title: "Relationship between GDP per Capita and Life Expectancy Sorted by Social Support Score",
+        description: "This project was built using Tableau"
     },
     {
-        link: "https://otcrconsulting.com/",
-        image: "hero.jpg",
+        link: "https://ayushshastry.github.io/",
+        image: "viz.jpeg",
         openInNewTab: true,
-        title: "OTCR Consulting Website",
-        description: "This website was made as an outreach tool for OTCR Consulting to promote the firm's services and attract student consultants. Developed with Wordpress"
+        title: "Narrative Visualization of Police Arrests",
+        description: "This visualization was made using HTML, CSS and D3.js"
     },
     {
-        link: "/capIndex.html",
+        link: "file:///Users/ayushshastry/Desktop/Defects.pdf",
         image: "hero.jpg",
         openInNewTab: true,
         title: "Market Capper",
