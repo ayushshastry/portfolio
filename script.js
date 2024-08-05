@@ -25,7 +25,7 @@ const projects = [
         link: "https://ayushshastry.github.io/",
         image: "images/viz.jpeg",
         openInNewTab: true,
-        title: "Narrative Visualization of Police Arrests",
+        title: "Narrative Visualization",
         description: "This visualization was made using HTML, CSS and D3.js and the dataset is from Kaggle"
     },
     {
@@ -39,7 +39,7 @@ const projects = [
         link: "https://github.com/ayushshastry/defects/blob/main/Defects.pdf",
         image: "images/forest.png",
         openInNewTab: true,
-        title: "Predicting Manufacturing Defects using Random Forest",
+        title: "Defects Prediction",
         description: "Data Analytics on Kaggle Dataset using Pandas, Seaborn and Plotly.px. Random Forest model was implemented using RandomForestClassifier()"
     }
 ]
