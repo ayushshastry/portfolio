@@ -2,6 +2,7 @@
 
 const nav = document.querySelector(".nav");
 
+
 //website loop
 let websiteLoop = setInterval(() => {
     const scrollTop = document.querySelector("html").scrollTop;
@@ -15,79 +16,98 @@ let websiteLoop = setInterval(() => {
 const projects = [
     {
         link: "https://public.tableau.com/app/profile/ayush.shastry/viz/dashboardSubmit/AyushShastrysDashboard?publish=yes",
-        image: "hero.jpg",
+        image: "images/map.jpeg",
         openInNewTab: true,
-        title: "Relationship between GDP per Capita and Life Expectancy Sorted by Social Support Score",
-        description: "This project was built using Tableau"
+        title: "Tableau Dashboard",
+        description: "This project looks at the relationship between GDP per Capita and Life Expectancy"
     },
     {
         link: "https://ayushshastry.github.io/",
-        image: "viz.jpeg",
+        image: "images/viz.jpeg",
         openInNewTab: true,
         title: "Narrative Visualization of Police Arrests",
-        description: "This visualization was made using HTML, CSS and D3.js"
+        description: "This visualization was made using HTML, CSS and D3.js and the dataset is from Kaggle"
     },
     {
-        link: "file:///Users/ayushshastry/Desktop/Defects.pdf",
-        image: "hero.jpg",
+        link: "https://github.com/ayushshastry/housing/blob/main/Housing.pdf",
+        image: "images/housing.jpeg",
         openInNewTab: true,
-        title: "Market Capper",
-        description: "A finance trivia game that uses dynamic webscraping. Developed with JS/CSS/HTML and Python for the CS124 Honors project"
+        title: "Housing Predictions",
+        description: "Leveraged multiple machine learning models such as Gradient Boosting, Adaptive Boosting and Random Forest"
     },
+    {
+        link: "https://github.com/ayushshastry/defects/blob/main/Defects.pdf",
+        image: "images/forest.png",
+        openInNewTab: true,
+        title: "Predicting Manufacturing Defects using Random Forest",
+        description: "Data Analytics on Kaggle Dataset using Pandas, Seaborn and Plotly.px. Random Forest model was implemented using RandomForestClassifier()"
+    }
 ]
 
 const projectHTML = document.querySelector(".projects_content");
 
 
-displayProjects();
+const toggleProjectsBtn = document.getElementById("toggle-projects-btn");
+
+let showAllProjects = false;
+
 function displayProjects() {
     projectHTML.innerHTML = '';
+    const projectsToDisplay = showAllProjects ? projects : projects.slice(0, 3);
 
-    for (let i = 0; i < projects.length - 1; i += 2) {
+    for (let i = 0; i < projectsToDisplay.length - 1; i += 2) {
         const html = `<div class="row">
-        <div class="item">
-            <div class="image__container">
-                <a href="${projects[i].link}">
-                    <img src="${projects[i].image}">
+            <div class="item">
+                <div class="image__container">
+                    <a href="${projectsToDisplay[i].link}" target="${projectsToDisplay[i].openInNewTab ? '_blank' : '_self'}">
+                        <img src="${projectsToDisplay[i].image}" alt="${projectsToDisplay[i].title}">
+                    </a>
+                </div>
+                <a href="${projectsToDisplay[i].link}" target="${projectsToDisplay[i].openInNewTab ? '_blank' : '_self'}">
+                    <h2 class="disable-select">${projectsToDisplay[i].title}</h2>
                 </a>
+                <p>${projectsToDisplay[i].description}</p>
             </div>
-            <a href="${projects[i].link}">
-                <h2 class="disable-select">${projects[i + 1].title}</h2>
-            </a>
-            <p>${projects[i].description}</p>
-        </div>
-        <div class="item">
-            <div class="image__container">
-                <a href="${projects[i+1].link}">
-                    <img src="${projects[i].image}">
+            <div class="item">
+                <div class="image__container">
+                    <a href="${projectsToDisplay[i + 1].link}" target="${projectsToDisplay[i + 1].openInNewTab ? '_blank' : '_self'}">
+                        <img src="${projectsToDisplay[i + 1].image}" alt="${projectsToDisplay[i + 1].title}">
+                    </a>
+                </div>
+                <a href="${projectsToDisplay[i + 1].link}" target="${projectsToDisplay[i + 1].openInNewTab ? '_blank' : '_self'}">
+                    <h2 class="disable-select">${projectsToDisplay[i + 1].title}</h2>
                 </a>
+                <p>${projectsToDisplay[i + 1].description}</p>
             </div>
-            <a href="${projects[i+1].link}">
-                <h2 class="disable-select">${projects[i+1].title}</h2>
-            </a>
-            <p>${projects[i+1].description}</p>
-        </div>
-    </div>`;
+        </div>`;
         projectHTML.insertAdjacentHTML("beforeend", html);
     }
 
-    let left = projects.length % 2;
-    if (left == 1) {
+    let left = projectsToDisplay.length % 2;
+    if (left === 1) {
         const html = `
         <div class="row">
             <div class="item">
                 <div class="image__container">
-                    <a href="${projects[projects.length - 1].link}">
-                        <img src="${projects[projects.length - 1].image}">
+                    <a href="${projectsToDisplay[projectsToDisplay.length - 1].link}" target="${projectsToDisplay[projectsToDisplay.length - 1].openInNewTab ? '_blank' : '_self'}">
+                        <img src="${projectsToDisplay[projectsToDisplay.length - 1].image}" alt="${projectsToDisplay[projectsToDisplay.length - 1].title}">
                     </a>
                 </div>
-                <a href="${projects[projects.length - 1].link}">
-                    <h2 class="disable-select">${projects[projects.length - 1].title}</h2>
+                <a href="${projectsToDisplay[projectsToDisplay.length - 1].link}" target="${projectsToDisplay[projectsToDisplay.length - 1].openInNewTab ? '_blank' : '_self'}">
+                    <h2 class="disable-select">${projectsToDisplay[projectsToDisplay.length - 1].title}</h2>
                 </a>
-                <p>${projects[projects.length - 1].description}</p>
+                <p>${projectsToDisplay[projectsToDisplay.length - 1].description}</p>
             </div>
-        </div>`
+        </div>`;
         projectHTML.insertAdjacentHTML("beforeend", html);
     }
+
+    toggleProjectsBtn.textContent = showAllProjects ? 'Show Less Projects' : 'Show All Projects';
 }
 
+toggleProjectsBtn.addEventListener('click', () => {
+    showAllProjects = !showAllProjects;
+    displayProjects();
+});
+
+displayProjects();

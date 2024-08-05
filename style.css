@@ -219,6 +219,7 @@ body {
 .projects .about_content p {
     width: 40vw;
     font-size: 1.5rem;
+    text-align: center;
 }
 
 .projects_content {
@@ -290,4 +291,22 @@ body {
     margin-bottom: 40px;
     width: 18vw;
     text-align: center;
+}
+
+#toggle-projects-btn {
+    text-align: center;
+    width: fit-content;
+    background: rgb(245, 241, 241);
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid black;
+    transition: 0.15s;
+}
+
+#toggle-projects-btn:hover {
+    background: #7c7c7c;
+    border: 2px solid #7c7c7c;
 }
