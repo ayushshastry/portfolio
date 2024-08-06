@@ -75,6 +75,7 @@ body {
 .header__link:hover {
     background-color: white;
     color: black;
+    margin: 2px;
 }
 
 /* navigation css */
@@ -153,7 +154,7 @@ body {
     margin-right: 100px;
     width: 300px;
     padding: 0;
-    text-align: left;
+    text-align: center;
     transition: 0.3s;
 }
 

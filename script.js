@@ -41,6 +41,13 @@ const projects = [
         openInNewTab: true,
         title: "Defects Prediction",
         description: "Data Analytics on Kaggle Dataset using Pandas, Seaborn and Plotly.px. Random Forest model was implemented using RandomForestClassifier()"
+    },
+    {
+        link: "https://github.com/ayushshastry/trading/blob/main/trading-bot.py",
+        image: "images/trading.jpg",
+        openInNewTab: true,
+        title: "Trading Bot",
+        description: "Used Alpaca API to get stock data in order to make trades based on moving averages and volatility"
     }
 ]
 
