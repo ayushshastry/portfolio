@@ -108,10 +108,12 @@
     .about__title{
         font-size: 200%;
         width: 85vw;
+        text-align: center;
     }
     .about_content h2 {
         font-size: 200% !important;
         width: 85vw !important;
+        text-align: center;
     }
     .about_content p {
         font-size: 120% !important;
